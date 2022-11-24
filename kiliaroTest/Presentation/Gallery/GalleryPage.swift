@@ -19,6 +19,9 @@ struct GalleryPage: View {
         NavigationStack {
             GridView(images: viewModel.models)
         }
+        .alert(viewModel.error ?? "" ,isPresented: $viewModel.showErrorAlert) {
+            Button("OK", role: .cancel) { }
+        }
         .onAppear() {
             Task {
                 try await viewModel.loadImages()

@@ -32,7 +32,7 @@ class GalleryViewModel: ObservableObject {
         } catch let (error) {
             debugPrint(error)
             self.isLoading = false
-            self.error = "an_error_occured"
+            self.error = error.localizedDescription
             self.showErrorAlert = true
         }
     }

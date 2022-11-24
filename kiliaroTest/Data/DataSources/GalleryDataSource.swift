@@ -59,7 +59,7 @@ extension GalleryApi: MoyaCacheable {
     var cachePolicy: MoyaCacheablePolicy {
         switch self {
         case .getImages:
-            return .returnCacheDataDontLoad
+            return .returnCacheDataElseLoad
         default:
           return .reloadIgnoringLocalAndRemoteCacheData
         }
