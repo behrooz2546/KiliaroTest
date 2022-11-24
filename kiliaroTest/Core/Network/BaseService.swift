@@ -12,6 +12,7 @@ class BaseService<API: TargetType> {
    
     private let provider = MoyaProvider<API>(plugins: [
         NetworkLoggerPlugin(configuration: .init(logOptions: .verbose)),
+        MoyaCacheablePlugin(),
 //        AccessTokenPlugin(tokenClosure: { _ in
 //            return "test_token"
 //        })

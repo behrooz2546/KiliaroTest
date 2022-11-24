@@ -54,6 +54,18 @@ extension GalleryApi: BaseAPI, AccessTokenAuthorizable {
     }
 }
 
+//MARK: - MoyaCacheable
+extension GalleryApi: MoyaCacheable {
+    var cachePolicy: MoyaCacheablePolicy {
+        switch self {
+        case .getImages:
+            return .returnCacheDataDontLoad
+        default:
+          return .reloadIgnoringLocalAndRemoteCacheData
+        }
+      }
+}
+
 
 enum ResizableMode {
     case bb

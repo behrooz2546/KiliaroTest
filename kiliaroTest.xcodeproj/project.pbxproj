@@ -41,6 +41,8 @@
 		FA69DFF1292FA71E00990F57 /* KingFisherImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF0292FA71E00990F57 /* KingFisherImageView.swift */; };
 		FA69DFF3292FB00B00990F57 /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF2292FB00B00990F57 /* ItemDetailsView.swift */; };
 		FA69DFF6292FBFCA00990F57 /* ByteUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF5292FBFCA00990F57 /* ByteUtils.swift */; };
+		FA69DFF8292FC33200990F57 /* MoyaCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF7292FC33200990F57 /* MoyaCacheable.swift */; };
+		FA69DFFA292FC35600990F57 /* MoyaCacheablePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF9292FC35600990F57 /* MoyaCacheablePlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		FA69DFF0292FA71E00990F57 /* KingFisherImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherImageView.swift; sourceTree = "<group>"; };
 		FA69DFF2292FB00B00990F57 /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
 		FA69DFF5292FBFCA00990F57 /* ByteUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteUtils.swift; sourceTree = "<group>"; };
+		FA69DFF7292FC33200990F57 /* MoyaCacheable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaCacheable.swift; sourceTree = "<group>"; };
+		FA69DFF9292FC35600990F57 /* MoyaCacheablePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaCacheablePlugin.swift; sourceTree = "<group>"; };
 		FEFA3AD3B16FDBA07E67084B /* Pods_kiliaroTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiliaroTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -241,6 +245,8 @@
 				FA69DFBB292F734700990F57 /* handleResponse.swift */,
 				FA69DFC2292F734700990F57 /* ResponseError.swift */,
 				FA69DFBC292F734700990F57 /* Token.swift */,
+				FA69DFF7292FC33200990F57 /* MoyaCacheable.swift */,
+				FA69DFF9292FC35600990F57 /* MoyaCacheablePlugin.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 				FA69DFE9292F900F00990F57 /* Color.swift in Sources */,
 				FA69DFF3292FB00B00990F57 /* ItemDetailsView.swift in Sources */,
 				FA69DFDB292F7D5300990F57 /* GalleryDataSource.swift in Sources */,
+				FA69DFFA292FC35600990F57 /* MoyaCacheablePlugin.swift in Sources */,
 				FA69DFC5292F734700990F57 /* AuthService.swift in Sources */,
 				FA37FB47292F70B1009CDF89 /* kiliaroTestApp.swift in Sources */,
 				FA69DFC7292F734700990F57 /* BaseService.swift in Sources */,
@@ -595,6 +602,7 @@
 				FA69DFF6292FBFCA00990F57 /* ByteUtils.swift in Sources */,
 				FA69DFD3292F782700990F57 /* ImageModel.swift in Sources */,
 				FA69DFD5292F7C3C00990F57 /* GalleryViewModel.swift in Sources */,
+				FA69DFF8292FC33200990F57 /* MoyaCacheable.swift in Sources */,
 				FA69DFC8292F734700990F57 /* BaseApi.swift in Sources */,
 				FA69DFE8292F900F00990F57 /* View.swift in Sources */,
 				FA69DFDD292F861600990F57 /* GalleryRepository.swift in Sources */,
