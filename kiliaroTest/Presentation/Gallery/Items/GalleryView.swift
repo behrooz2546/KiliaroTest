@@ -12,8 +12,7 @@ struct GridView: View {
 
     private static let initialColumns = 3
 
-    @State private var gridColumns = Array(repeating: GridItem(.flexible()), count: initialColumns)
-    @State private var numColumns = initialColumns
+    var gridColumns = Array(repeating: GridItem(.flexible()), count: initialColumns)
     
     private var columnsTitle: String {
         gridColumns.count > 1 ? "\(gridColumns.count) Columns" : "1 Column"
@@ -25,10 +24,9 @@ struct GridView: View {
                 LazyVGrid(columns: gridColumns) {
                     ForEach(images) { item in
                         GeometryReader { geo in
-                            GalleryItem(size: geo.size.width, item: item)
-//                            NavigationLink(destination: DetailView(item: item)) {
-//
-//                            }
+                            NavigationLink(destination: ItemDetailsView(item: item)) {
+                                GalleryGridItemView(size: geo.size.width, item: item)
+                            }
                         }
                         .cornerRadius(8.0)
                         .aspectRatio(1, contentMode: .fit)

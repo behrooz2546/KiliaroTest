@@ -13,7 +13,23 @@ struct ImageModel: Codable, Identifiable {
     let createdAt: Date?
     let thumbnailUrl: String?
     let downloadUrl: String?
+    
+    func getCreatedDateText() -> String {
+        if let createdAt {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            return dateFormatter.string(from: createdAt)
+        }
+        return ""
+    }
+    
+    func getSizeText() -> String {
+        if let size {
+            return ByteUtils.getSizeText(bytes: size)
+        }
         
+        return ""
+    }
     
     #if DEBUG
     static let example = ImageModel(
