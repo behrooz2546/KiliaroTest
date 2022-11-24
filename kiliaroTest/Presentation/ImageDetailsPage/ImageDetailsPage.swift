@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ItemDetailsView: View {
+struct ImageDetailsPage: View {
     let item: ImageModel
     
     var body: some View {
@@ -25,6 +25,6 @@ struct ItemDetailsView: View {
 
 struct ItemDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDetailsView(item: ImageModel.example)
+        ImageDetailsPage(item: ImageModel.example)
     }
 }

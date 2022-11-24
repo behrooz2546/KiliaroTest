@@ -19,7 +19,7 @@ struct GridView: View {
                 LazyVGrid(columns: gridColumns) {
                     ForEach(images) { item in
                         GeometryReader { geo in
-                            NavigationLink(destination: ItemDetailsView(item: item)) {
+                            NavigationLink(destination: ImageDetailsPage(item: item)) {
                                 GalleryGridItemView(size: geo.size.width, item: item)
                             }
                         }

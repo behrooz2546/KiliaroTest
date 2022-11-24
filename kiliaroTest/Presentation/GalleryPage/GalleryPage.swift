@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GalleryPage: View {
     
-    @StateObject var viewModel = GalleryViewModel(
+    @StateObject var viewModel = GalleryPageViewModel(
         repository: Resolver.shared.resolve(GalleryRepository.self)
     )
     

@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 @MainActor
-class GalleryViewModel: ObservableObject {
+class GalleryPageViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
     @Published var models = [ImageModel]()

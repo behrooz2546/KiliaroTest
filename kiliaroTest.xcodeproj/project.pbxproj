@@ -25,7 +25,7 @@
 		FA69DFCA292F734700990F57 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFC2292F734700990F57 /* ResponseError.swift */; };
 		FA69DFD0292F77E700990F57 /* GalleryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFCF292F77E700990F57 /* GalleryPage.swift */; };
 		FA69DFD3292F782700990F57 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFD2292F782700990F57 /* ImageModel.swift */; };
-		FA69DFD5292F7C3C00990F57 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFD4292F7C3C00990F57 /* GalleryViewModel.swift */; };
+		FA69DFD5292F7C3C00990F57 /* GalleryPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFD4292F7C3C00990F57 /* GalleryPageViewModel.swift */; };
 		FA69DFD8292F7CFC00990F57 /* GalleryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFD7292F7CFC00990F57 /* GalleryRepositoryImpl.swift */; };
 		FA69DFDB292F7D5300990F57 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFDA292F7D5300990F57 /* GalleryDataSource.swift */; };
 		FA69DFDD292F861600990F57 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFDC292F861600990F57 /* GalleryRepository.swift */; };
@@ -37,7 +37,7 @@
 		FA69DFEC292F953B00990F57 /* GalleryGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFEB292F953B00990F57 /* GalleryGridItemView.swift */; };
 		FA69DFEE292F972200990F57 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFED292F972200990F57 /* GalleryView.swift */; };
 		FA69DFF1292FA71E00990F57 /* KingFisherImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF0292FA71E00990F57 /* KingFisherImageView.swift */; };
-		FA69DFF3292FB00B00990F57 /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF2292FB00B00990F57 /* ItemDetailsView.swift */; };
+		FA69DFF3292FB00B00990F57 /* ImageDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF2292FB00B00990F57 /* ImageDetailsPage.swift */; };
 		FA69DFF6292FBFCA00990F57 /* ByteUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF5292FBFCA00990F57 /* ByteUtils.swift */; };
 		FA69DFF8292FC33200990F57 /* MoyaCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF7292FC33200990F57 /* MoyaCacheable.swift */; };
 		FA69DFFA292FC35600990F57 /* MoyaCacheablePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF9292FC35600990F57 /* MoyaCacheablePlugin.swift */; };
@@ -89,7 +89,7 @@
 		FA69DFC2292F734700990F57 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		FA69DFCF292F77E700990F57 /* GalleryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPage.swift; sourceTree = "<group>"; };
 		FA69DFD2292F782700990F57 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
-		FA69DFD4292F7C3C00990F57 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		FA69DFD4292F7C3C00990F57 /* GalleryPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPageViewModel.swift; sourceTree = "<group>"; };
 		FA69DFD7292F7CFC00990F57 /* GalleryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepositoryImpl.swift; sourceTree = "<group>"; };
 		FA69DFDA292F7D5300990F57 /* GalleryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
 		FA69DFDC292F861600990F57 /* GalleryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepository.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		FA69DFEB292F953B00990F57 /* GalleryGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryGridItemView.swift; sourceTree = "<group>"; };
 		FA69DFED292F972200990F57 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		FA69DFF0292FA71E00990F57 /* KingFisherImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherImageView.swift; sourceTree = "<group>"; };
-		FA69DFF2292FB00B00990F57 /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
+		FA69DFF2292FB00B00990F57 /* ImageDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsPage.swift; sourceTree = "<group>"; };
 		FA69DFF5292FBFCA00990F57 /* ByteUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteUtils.swift; sourceTree = "<group>"; };
 		FA69DFF7292FC33200990F57 /* MoyaCacheable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaCacheable.swift; sourceTree = "<group>"; };
 		FA69DFF9292FC35600990F57 /* MoyaCacheablePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaCacheablePlugin.swift; sourceTree = "<group>"; };
@@ -223,6 +223,14 @@
 			path = kiliaroTestUITests;
 			sourceTree = "<group>";
 		};
+		FA4995BF292FDCBA005B75AA /* ImageDetailsPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA69DFF2292FB00B00990F57 /* ImageDetailsPage.swift */,
+			);
+			path = ImageDetailsPage;
+			sourceTree = "<group>";
+		};
 		FA69DFBA292F730B00990F57 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,7 +261,8 @@
 		FA69DFCC292F77B000990F57 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FA69DFCE292F77CB00990F57 /* Gallery */,
+				FA4995BF292FDCBA005B75AA /* ImageDetailsPage */,
+				FA69DFCE292F77CB00990F57 /* GalleryPage */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -266,14 +275,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		FA69DFCE292F77CB00990F57 /* Gallery */ = {
+		FA69DFCE292F77CB00990F57 /* GalleryPage */ = {
 			isa = PBXGroup;
 			children = (
 				FA69DFEA292F952500990F57 /* Items */,
 				FA69DFCF292F77E700990F57 /* GalleryPage.swift */,
-				FA69DFD4292F7C3C00990F57 /* GalleryViewModel.swift */,
+				FA69DFD4292F7C3C00990F57 /* GalleryPageViewModel.swift */,
 			);
-			path = Gallery;
+			path = GalleryPage;
 			sourceTree = "<group>";
 		};
 		FA69DFD1292F780400990F57 /* Data */ = {
@@ -326,8 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				FA69DFEB292F953B00990F57 /* GalleryGridItemView.swift */,
-				FA69DFED292F972200990F57 /* GalleryView.swift */,
-				FA69DFF2292FB00B00990F57 /* ItemDetailsView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -335,6 +342,7 @@
 		FA69DFEF292FA70800990F57 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA69DFED292F972200990F57 /* GalleryView.swift */,
 				FA69DFF0292FA71E00990F57 /* KingFisherImageView.swift */,
 			);
 			path = Views;
@@ -590,7 +598,7 @@
 				FA69DFC3292F734700990F57 /* handleResponse.swift in Sources */,
 				FA37FB49292F70B1009CDF89 /* ContentView.swift in Sources */,
 				FA69DFE9292F900F00990F57 /* Color.swift in Sources */,
-				FA69DFF3292FB00B00990F57 /* ItemDetailsView.swift in Sources */,
+				FA69DFF3292FB00B00990F57 /* ImageDetailsPage.swift in Sources */,
 				FA69DFDB292F7D5300990F57 /* GalleryDataSource.swift in Sources */,
 				FA69DFFA292FC35600990F57 /* MoyaCacheablePlugin.swift in Sources */,
 				FA37FB47292F70B1009CDF89 /* kiliaroTestApp.swift in Sources */,
@@ -602,7 +610,7 @@
 				FA69DFF6292FBFCA00990F57 /* ByteUtils.swift in Sources */,
 				FA69DFD3292F782700990F57 /* ImageModel.swift in Sources */,
 				FA69DFFE292FD3B700990F57 /* Resolver.swift in Sources */,
-				FA69DFD5292F7C3C00990F57 /* GalleryViewModel.swift in Sources */,
+				FA69DFD5292F7C3C00990F57 /* GalleryPageViewModel.swift in Sources */,
 				FA69DFF8292FC33200990F57 /* MoyaCacheable.swift in Sources */,
 				FA69DFC8292F734700990F57 /* BaseApi.swift in Sources */,
 				FA69DFE8292F900F00990F57 /* View.swift in Sources */,
