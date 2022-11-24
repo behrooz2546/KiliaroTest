@@ -8,15 +8,10 @@
 import SwiftUI
 
 struct GridView: View {
-    var images: [ImageModel]
-
-    private static let initialColumns = 3
-
-    var gridColumns = Array(repeating: GridItem(.flexible()), count: initialColumns)
     
-    private var columnsTitle: String {
-        gridColumns.count > 1 ? "\(gridColumns.count) Columns" : "1 Column"
-    }
+    var images: [ImageModel]
+    private static let initialColumns = 3
+    var gridColumns = Array(repeating: GridItem(.flexible()), count: initialColumns)
     
     var body: some View {
         VStack {

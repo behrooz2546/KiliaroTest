@@ -10,9 +10,7 @@ import SwiftUI
 struct GalleryPage: View {
     
     @StateObject var viewModel = GalleryViewModel(
-        repository: GalleryRepositoryImpl(
-            dataSource: GalleryDataSource()
-        )
+        repository: Resolver.shared.resolve(GalleryRepository.self)
     )
     
     var body: some View {

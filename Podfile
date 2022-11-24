@@ -9,6 +9,7 @@ target 'kiliaroTest' do
   pod 'Kingfisher/SwiftUI'
   pod 'Moya', '~> 15.0'
   pod 'Moya/RxSwift', '~> 15.0'
+  pod 'Swinject'
 
   target 'kiliaroTestTests' do
     inherit! :search_paths

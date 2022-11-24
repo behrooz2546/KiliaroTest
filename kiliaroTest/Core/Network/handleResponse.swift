@@ -12,10 +12,6 @@ import RxSwift
 extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
   func handleResponse() -> Single<Element> {
     return flatMap { response in
-      if let newToken = try? response.map(Token.self) {
-//        UserDefaults.accessToken = newToken.accessToken
-//        UserDefaults.refreshToken = newToken.refreshToken
-      }
                     
       if (200 ... 299) ~= response.statusCode {
         return Single.just(response)

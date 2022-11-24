@@ -13,9 +13,6 @@ class BaseService<API: TargetType> {
     private let provider = MoyaProvider<API>(plugins: [
         NetworkLoggerPlugin(configuration: .init(logOptions: .verbose)),
         MoyaCacheablePlugin(),
-//        AccessTokenPlugin(tokenClosure: { _ in
-//            return "test_token"
-//        })
     ])
 
   func request(_ api: API) -> Single<Response> {
@@ -27,11 +24,6 @@ class BaseService<API: TargetType> {
           return Single.just($0)
         }
       }
-      .retry(when: { (error: Observable<TokenError>)  in
-          error.flatMap { error -> Single<Response> in
-              AuthService.shared.renewalToken()
-          }
-      })
       .handleResponse()
       .filterSuccessfulStatusCodes()
       .retry(2)

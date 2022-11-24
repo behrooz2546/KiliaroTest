@@ -18,8 +18,6 @@
 		FA37FB62292F70B2009CDF89 /* kiliaroTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37FB61292F70B2009CDF89 /* kiliaroTestUITests.swift */; };
 		FA37FB64292F70B2009CDF89 /* kiliaroTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37FB63292F70B2009CDF89 /* kiliaroTestUITestsLaunchTests.swift */; };
 		FA69DFC3292F734700990F57 /* handleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBB292F734700990F57 /* handleResponse.swift */; };
-		FA69DFC4292F734700990F57 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBC292F734700990F57 /* Token.swift */; };
-		FA69DFC5292F734700990F57 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBD292F734700990F57 /* AuthService.swift */; };
 		FA69DFC6292F734700990F57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBE292F734700990F57 /* Constants.swift */; };
 		FA69DFC7292F734700990F57 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBF292F734700990F57 /* BaseService.swift */; };
 		FA69DFC8292F734700990F57 /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFC0292F734700990F57 /* BaseApi.swift */; };
@@ -44,6 +42,7 @@
 		FA69DFF8292FC33200990F57 /* MoyaCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF7292FC33200990F57 /* MoyaCacheable.swift */; };
 		FA69DFFA292FC35600990F57 /* MoyaCacheablePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF9292FC35600990F57 /* MoyaCacheablePlugin.swift */; };
 		FA69DFFC292FCCEA00990F57 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFFB292FCCEA00990F57 /* AlertUtils.swift */; };
+		FA69DFFE292FD3B700990F57 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFFD292FD3B700990F57 /* Resolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +82,6 @@
 		FA37FB61292F70B2009CDF89 /* kiliaroTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiliaroTestUITests.swift; sourceTree = "<group>"; };
 		FA37FB63292F70B2009CDF89 /* kiliaroTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiliaroTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA69DFBB292F734700990F57 /* handleResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = handleResponse.swift; sourceTree = "<group>"; };
-		FA69DFBC292F734700990F57 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		FA69DFBD292F734700990F57 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		FA69DFBE292F734700990F57 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA69DFBF292F734700990F57 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		FA69DFC0292F734700990F57 /* BaseApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
@@ -109,6 +106,7 @@
 		FA69DFF7292FC33200990F57 /* MoyaCacheable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaCacheable.swift; sourceTree = "<group>"; };
 		FA69DFF9292FC35600990F57 /* MoyaCacheablePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaCacheablePlugin.swift; sourceTree = "<group>"; };
 		FA69DFFB292FCCEA00990F57 /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
+		FA69DFFD292FD3B700990F57 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		FEFA3AD3B16FDBA07E67084B /* Pods_kiliaroTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiliaroTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -234,6 +232,7 @@
 				FA69DFCB292F764500990F57 /* Network */,
 				FA69DFBE292F734700990F57 /* Constants.swift */,
 				FA69DFC1292F734700990F57 /* Font.swift */,
+				FA69DFFD292FD3B700990F57 /* Resolver.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -241,12 +240,10 @@
 		FA69DFCB292F764500990F57 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FA69DFBD292F734700990F57 /* AuthService.swift */,
 				FA69DFC0292F734700990F57 /* BaseApi.swift */,
 				FA69DFBF292F734700990F57 /* BaseService.swift */,
 				FA69DFBB292F734700990F57 /* handleResponse.swift */,
 				FA69DFC2292F734700990F57 /* ResponseError.swift */,
-				FA69DFBC292F734700990F57 /* Token.swift */,
 				FA69DFF7292FC33200990F57 /* MoyaCacheable.swift */,
 				FA69DFF9292FC35600990F57 /* MoyaCacheablePlugin.swift */,
 			);
@@ -596,7 +593,6 @@
 				FA69DFF3292FB00B00990F57 /* ItemDetailsView.swift in Sources */,
 				FA69DFDB292F7D5300990F57 /* GalleryDataSource.swift in Sources */,
 				FA69DFFA292FC35600990F57 /* MoyaCacheablePlugin.swift in Sources */,
-				FA69DFC5292F734700990F57 /* AuthService.swift in Sources */,
 				FA37FB47292F70B1009CDF89 /* kiliaroTestApp.swift in Sources */,
 				FA69DFC7292F734700990F57 /* BaseService.swift in Sources */,
 				FA69DFC9292F734700990F57 /* Font.swift in Sources */,
@@ -605,6 +601,7 @@
 				FA69DFFC292FCCEA00990F57 /* AlertUtils.swift in Sources */,
 				FA69DFF6292FBFCA00990F57 /* ByteUtils.swift in Sources */,
 				FA69DFD3292F782700990F57 /* ImageModel.swift in Sources */,
+				FA69DFFE292FD3B700990F57 /* Resolver.swift in Sources */,
 				FA69DFD5292F7C3C00990F57 /* GalleryViewModel.swift in Sources */,
 				FA69DFF8292FC33200990F57 /* MoyaCacheable.swift in Sources */,
 				FA69DFC8292F734700990F57 /* BaseApi.swift in Sources */,
@@ -617,7 +614,6 @@
 				FA69DFE5292F900F00990F57 /* String.swift in Sources */,
 				FA69DFF1292FA71E00990F57 /* KingFisherImageView.swift in Sources */,
 				FA69DFE6292F900F00990F57 /* Int.swift in Sources */,
-				FA69DFC4292F734700990F57 /* Token.swift in Sources */,
 				FA69DFC6292F734700990F57 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
