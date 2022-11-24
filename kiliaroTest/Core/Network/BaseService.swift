@@ -12,9 +12,9 @@ class BaseService<API: TargetType> {
    
     private let provider = MoyaProvider<API>(plugins: [
         NetworkLoggerPlugin(configuration: .init(logOptions: .verbose)),
-        AccessTokenPlugin(tokenClosure: { _ in
-            return "test_token"
-        })
+//        AccessTokenPlugin(tokenClosure: { _ in
+//            return "test_token"
+//        })
     ])
 
   func request(_ api: API) -> Single<Response> {

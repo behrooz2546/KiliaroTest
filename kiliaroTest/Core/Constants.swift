@@ -8,5 +8,6 @@
 import Foundation
 
 struct Constants {
-    static let baseUrl = "https://api1.kiliaro.com/"
+    static let baseUrl = "https://api1.kiliaro.com"
+    static let key = "djlCbGusTJamg_ca4axEVw"
 }

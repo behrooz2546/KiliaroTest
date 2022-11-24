@@ -11,7 +11,7 @@ import SwiftUI
 struct kiliaroTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GalleryPage()
         }
     }
 }
