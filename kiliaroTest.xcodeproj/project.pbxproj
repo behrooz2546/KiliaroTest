@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A23936D0931E46DD8FD4007 /* Pods_kiliaroTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFA3AD3B16FDBA07E67084B /* Pods_kiliaroTest.framework */; };
+		3C15D5F4B38CB16AE356650C /* Pods_kiliaroTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205F816A7F7FAD7A9ED56FAC /* Pods_kiliaroTestTests.framework */; };
+		9C726CBD26D252BBE2FEAA59 /* Pods_kiliaroTest_kiliaroTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5F9904137C9A2572F78D37 /* Pods_kiliaroTest_kiliaroTestUITests.framework */; };
 		FA37FB47292F70B1009CDF89 /* kiliaroTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37FB46292F70B1009CDF89 /* kiliaroTestApp.swift */; };
 		FA37FB49292F70B1009CDF89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37FB48292F70B1009CDF89 /* ContentView.swift */; };
 		FA37FB4B292F70B2009CDF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37FB4A292F70B2009CDF89 /* Assets.xcassets */; };
@@ -14,6 +17,16 @@
 		FA37FB58292F70B2009CDF89 /* kiliaroTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37FB57292F70B2009CDF89 /* kiliaroTestTests.swift */; };
 		FA37FB62292F70B2009CDF89 /* kiliaroTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37FB61292F70B2009CDF89 /* kiliaroTestUITests.swift */; };
 		FA37FB64292F70B2009CDF89 /* kiliaroTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37FB63292F70B2009CDF89 /* kiliaroTestUITestsLaunchTests.swift */; };
+		FA69DFC3292F734700990F57 /* handleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBB292F734700990F57 /* handleResponse.swift */; };
+		FA69DFC4292F734700990F57 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBC292F734700990F57 /* Token.swift */; };
+		FA69DFC5292F734700990F57 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBD292F734700990F57 /* AuthService.swift */; };
+		FA69DFC6292F734700990F57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBE292F734700990F57 /* Constants.swift */; };
+		FA69DFC7292F734700990F57 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFBF292F734700990F57 /* BaseService.swift */; };
+		FA69DFC8292F734700990F57 /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFC0292F734700990F57 /* BaseApi.swift */; };
+		FA69DFC9292F734700990F57 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFC1292F734700990F57 /* Font.swift */; };
+		FA69DFCA292F734700990F57 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFC2292F734700990F57 /* ResponseError.swift */; };
+		FA69DFD0292F77E700990F57 /* GalleryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFCF292F77E700990F57 /* GalleryPage.swift */; };
+		FA69DFD3292F782700990F57 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFD2292F782700990F57 /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0001599A531FDE530F9FF54A /* Pods-kiliaroTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiliaroTest.release.xcconfig"; path = "Target Support Files/Pods-kiliaroTest/Pods-kiliaroTest.release.xcconfig"; sourceTree = "<group>"; };
+		1B5F9904137C9A2572F78D37 /* Pods_kiliaroTest_kiliaroTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiliaroTest_kiliaroTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		205F816A7F7FAD7A9ED56FAC /* Pods_kiliaroTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiliaroTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		624AF79F3D32DB185E90449F /* Pods-kiliaroTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiliaroTestTests.debug.xcconfig"; path = "Target Support Files/Pods-kiliaroTestTests/Pods-kiliaroTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		790573BDF75FAD31D5E782DB /* Pods-kiliaroTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiliaroTestTests.release.xcconfig"; path = "Target Support Files/Pods-kiliaroTestTests/Pods-kiliaroTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C465AA8C364AFFC7396A653 /* Pods-kiliaroTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiliaroTest.debug.xcconfig"; path = "Target Support Files/Pods-kiliaroTest/Pods-kiliaroTest.debug.xcconfig"; sourceTree = "<group>"; };
+		905560BA046B40432A1B680B /* Pods-kiliaroTest-kiliaroTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiliaroTest-kiliaroTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-kiliaroTest-kiliaroTestUITests/Pods-kiliaroTest-kiliaroTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACC695954E99837B0AF6690E /* Pods-kiliaroTest-kiliaroTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiliaroTest-kiliaroTestUITests.release.xcconfig"; path = "Target Support Files/Pods-kiliaroTest-kiliaroTestUITests/Pods-kiliaroTest-kiliaroTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA37FB43292F70B1009CDF89 /* kiliaroTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kiliaroTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA37FB46292F70B1009CDF89 /* kiliaroTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiliaroTestApp.swift; sourceTree = "<group>"; };
 		FA37FB48292F70B1009CDF89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +65,17 @@
 		FA37FB5D292F70B2009CDF89 /* kiliaroTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kiliaroTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA37FB61292F70B2009CDF89 /* kiliaroTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiliaroTestUITests.swift; sourceTree = "<group>"; };
 		FA37FB63292F70B2009CDF89 /* kiliaroTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiliaroTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA69DFBB292F734700990F57 /* handleResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = handleResponse.swift; sourceTree = "<group>"; };
+		FA69DFBC292F734700990F57 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		FA69DFBD292F734700990F57 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FA69DFBE292F734700990F57 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA69DFBF292F734700990F57 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		FA69DFC0292F734700990F57 /* BaseApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
+		FA69DFC1292F734700990F57 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		FA69DFC2292F734700990F57 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		FA69DFCF292F77E700990F57 /* GalleryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPage.swift; sourceTree = "<group>"; };
+		FA69DFD2292F782700990F57 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		FEFA3AD3B16FDBA07E67084B /* Pods_kiliaroTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiliaroTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23936D0931E46DD8FD4007 /* Pods_kiliaroTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C15D5F4B38CB16AE356650C /* Pods_kiliaroTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +99,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C726CBD26D252BBE2FEAA59 /* Pods_kiliaroTest_kiliaroTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		339ACDBC1DE2D71134C5CFEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEFA3AD3B16FDBA07E67084B /* Pods_kiliaroTest.framework */,
+				1B5F9904137C9A2572F78D37 /* Pods_kiliaroTest_kiliaroTestUITests.framework */,
+				205F816A7F7FAD7A9ED56FAC /* Pods_kiliaroTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		593F0764E7287C6155D6164D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C465AA8C364AFFC7396A653 /* Pods-kiliaroTest.debug.xcconfig */,
+				0001599A531FDE530F9FF54A /* Pods-kiliaroTest.release.xcconfig */,
+				905560BA046B40432A1B680B /* Pods-kiliaroTest-kiliaroTestUITests.debug.xcconfig */,
+				ACC695954E99837B0AF6690E /* Pods-kiliaroTest-kiliaroTestUITests.release.xcconfig */,
+				624AF79F3D32DB185E90449F /* Pods-kiliaroTestTests.debug.xcconfig */,
+				790573BDF75FAD31D5E782DB /* Pods-kiliaroTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA37FB3A292F70B0009CDF89 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +136,8 @@
 				FA37FB56292F70B2009CDF89 /* kiliaroTestTests */,
 				FA37FB60292F70B2009CDF89 /* kiliaroTestUITests */,
 				FA37FB44292F70B1009CDF89 /* Products */,
+				593F0764E7287C6155D6164D /* Pods */,
+				339ACDBC1DE2D71134C5CFEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +154,10 @@
 		FA37FB45292F70B1009CDF89 /* kiliaroTest */ = {
 			isa = PBXGroup;
 			children = (
+				FA69DFD1292F780400990F57 /* Data */,
+				FA69DFCD292F77BE00990F57 /* Domain */,
+				FA69DFCC292F77B000990F57 /* Features */,
+				FA69DFBA292F730B00990F57 /* Core */,
 				FA37FB46292F70B1009CDF89 /* kiliaroTestApp.swift */,
 				FA37FB48292F70B1009CDF89 /* ContentView.swift */,
 				FA37FB4A292F70B2009CDF89 /* Assets.xcassets */,
@@ -127,6 +191,60 @@
 			path = kiliaroTestUITests;
 			sourceTree = "<group>";
 		};
+		FA69DFBA292F730B00990F57 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FA69DFCB292F764500990F57 /* Network */,
+				FA69DFBE292F734700990F57 /* Constants.swift */,
+				FA69DFC1292F734700990F57 /* Font.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FA69DFCB292F764500990F57 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA69DFBD292F734700990F57 /* AuthService.swift */,
+				FA69DFC0292F734700990F57 /* BaseApi.swift */,
+				FA69DFBF292F734700990F57 /* BaseService.swift */,
+				FA69DFBB292F734700990F57 /* handleResponse.swift */,
+				FA69DFC2292F734700990F57 /* ResponseError.swift */,
+				FA69DFBC292F734700990F57 /* Token.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA69DFCC292F77B000990F57 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FA69DFCE292F77CB00990F57 /* Gallery */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FA69DFCD292F77BE00990F57 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FA69DFCE292F77CB00990F57 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				FA69DFCF292F77E700990F57 /* GalleryPage.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		FA69DFD1292F780400990F57 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA69DFD2292F782700990F57 /* ImageModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA37FB67292F70B2009CDF89 /* Build configuration list for PBXNativeTarget "kiliaroTest" */;
 			buildPhases = (
+				345C4C4188F2F299E4FC112A /* [CP] Check Pods Manifest.lock */,
 				FA37FB3F292F70B0009CDF89 /* Sources */,
 				FA37FB40292F70B0009CDF89 /* Frameworks */,
 				FA37FB41292F70B0009CDF89 /* Resources */,
+				294B675C75DA32AF4E7B39D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +271,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA37FB6A292F70B2009CDF89 /* Build configuration list for PBXNativeTarget "kiliaroTestTests" */;
 			buildPhases = (
+				1F6AB7D404100B20B25ACCE2 /* [CP] Check Pods Manifest.lock */,
 				FA37FB4F292F70B2009CDF89 /* Sources */,
 				FA37FB50292F70B2009CDF89 /* Frameworks */,
 				FA37FB51292F70B2009CDF89 /* Resources */,
@@ -169,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA37FB6D292F70B2009CDF89 /* Build configuration list for PBXNativeTarget "kiliaroTestUITests" */;
 			buildPhases = (
+				31B3F87F842CC48072F69233 /* [CP] Check Pods Manifest.lock */,
 				FA37FB59292F70B2009CDF89 /* Sources */,
 				FA37FB5A292F70B2009CDF89 /* Frameworks */,
 				FA37FB5B292F70B2009CDF89 /* Resources */,
+				0BB5F9B19268859FC164903A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,13 +375,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BB5F9B19268859FC164903A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kiliaroTest-kiliaroTestUITests/Pods-kiliaroTest-kiliaroTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kiliaroTest-kiliaroTestUITests/Pods-kiliaroTest-kiliaroTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kiliaroTest-kiliaroTestUITests/Pods-kiliaroTest-kiliaroTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F6AB7D404100B20B25ACCE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kiliaroTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		294B675C75DA32AF4E7B39D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kiliaroTest/Pods-kiliaroTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kiliaroTest/Pods-kiliaroTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kiliaroTest/Pods-kiliaroTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31B3F87F842CC48072F69233 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kiliaroTest-kiliaroTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		345C4C4188F2F299E4FC112A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kiliaroTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA37FB3F292F70B0009CDF89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA69DFC3292F734700990F57 /* handleResponse.swift in Sources */,
 				FA37FB49292F70B1009CDF89 /* ContentView.swift in Sources */,
+				FA69DFC5292F734700990F57 /* AuthService.swift in Sources */,
 				FA37FB47292F70B1009CDF89 /* kiliaroTestApp.swift in Sources */,
+				FA69DFC7292F734700990F57 /* BaseService.swift in Sources */,
+				FA69DFC9292F734700990F57 /* Font.swift in Sources */,
+				FA69DFD0292F77E700990F57 /* GalleryPage.swift in Sources */,
+				FA69DFD3292F782700990F57 /* ImageModel.swift in Sources */,
+				FA69DFC8292F734700990F57 /* BaseApi.swift in Sources */,
+				FA69DFCA292F734700990F57 /* ResponseError.swift in Sources */,
+				FA69DFC4292F734700990F57 /* Token.swift in Sources */,
+				FA69DFC6292F734700990F57 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +647,7 @@
 		};
 		FA37FB68292F70B2009CDF89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C465AA8C364AFFC7396A653 /* Pods-kiliaroTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +677,7 @@
 		};
 		FA37FB69292F70B2009CDF89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0001599A531FDE530F9FF54A /* Pods-kiliaroTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +707,7 @@
 		};
 		FA37FB6B292F70B2009CDF89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 624AF79F3D32DB185E90449F /* Pods-kiliaroTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +728,7 @@
 		};
 		FA37FB6C292F70B2009CDF89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790573BDF75FAD31D5E782DB /* Pods-kiliaroTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,6 +749,7 @@
 		};
 		FA37FB6E292F70B2009CDF89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 905560BA046B40432A1B680B /* Pods-kiliaroTest-kiliaroTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +768,7 @@
 		};
 		FA37FB6F292F70B2009CDF89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACC695954E99837B0AF6690E /* Pods-kiliaroTest-kiliaroTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
