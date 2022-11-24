@@ -7,20 +7,21 @@
 
 import Foundation
 
-struct ImageModel: Codable {
+struct ImageModel: Codable, Identifiable {
     let id: String
-    let userId: String?
-    let mediaType: String?
-    let filename: String?
     let size: Int?
     let createdAt: Date?
-    let takenAt: Date?
-    let guessedTakenAt: String?
-    let md5sum: String?
-    let contentType: String?
-    let video: String?
     let thumbnailUrl: String?
     let downloadUrl: String?
-    let resx: Int?
-    let resy: Int?
+        
+    
+    #if DEBUG
+    static let example = ImageModel(
+        id: "60cc705d0025904750ee22d300020eb4",
+        size: 983178,
+        createdAt: Date.now,
+        thumbnailUrl: "https://imgdc1.kiliaro.com/shared/djlCbGusTJamg_ca4axEVw/imageresize/i/60cc705d0025904750ee22d300020eb4/0.jpg",
+        downloadUrl: "https://imgdc1.kiliaro.com/shared/djlCbGusTJamg_ca4axEVw/images/60cc705d0025904750ee22d300020eb4/download/tanjir-ahmed-chowdhury-FCfu2MtA4Pw-unsplash.jpg"
+    )
+    #endif
 }

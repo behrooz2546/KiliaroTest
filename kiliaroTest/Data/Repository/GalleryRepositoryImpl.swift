@@ -16,9 +16,14 @@ final class GalleryRepositoryImpl: GalleryRepository {
     }
     
     func getImages(width: Int, height: Int, resizableMode: ResizableMode) async throws -> [ImageModel] {
+        
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        jsonDecoder.dateDecodingStrategy = .iso8601
+        
         let images: [ImageModel] = try await withCheckedThrowingContinuation({ continuation in
             dataSource.getImages(width: width, height: height, resizableMode: resizableMode)
-                .map([ImageModel].self)
+                .map([ImageModel].self, using: jsonDecoder)
                 .subscribe { response in
                     continuation.resume(returning: response)
                 } onFailure: { error in

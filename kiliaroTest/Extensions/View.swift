@@ -35,3 +35,8 @@ extension View {
     #endif
 
 }
+
+
+extension URLCache {
+    
+}

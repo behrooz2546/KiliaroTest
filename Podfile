@@ -6,7 +6,7 @@ target 'kiliaroTest' do
   use_frameworks!
 
   # Pods for kiliaroTest
-  pod 'Kingfisher', '~> 7.0'
+  pod 'Kingfisher/SwiftUI'
   pod 'Moya', '~> 15.0'
   pod 'Moya/RxSwift', '~> 15.0'
 

@@ -25,105 +25,113 @@
 //  THE SOFTWARE.
 
 #if canImport(SwiftUI) && canImport(Combine)
-import SwiftUI
 import Combine
+import SwiftUI
+#if !KingfisherCocoaPods
+import Kingfisher
+#endif
 
-@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 extension KFImage {
 
     /// Represents a binder for `KFImage`. It takes responsibility as an `ObjectBinding` and performs
     /// image downloading and progress reporting based on `KingfisherManager`.
-    class ImageBinder: ObservableObject {
-        
-        init() {}
+    public class ImageBinder: ObservableObject {
+
+        let source: Source?
+        let options: KingfisherOptionsInfo?
 
         var downloadTask: DownloadTask?
-        private var loading = false
 
-        var loadingOrSucceeded: Bool {
-            return loading || loadedImage != nil
+        var loadingOrSucceeded: Bool = false
+
+        let onFailureDelegate = Delegate<KingfisherError, Void>()
+        let onSuccessDelegate = Delegate<RetrieveImageResult, Void>()
+        let onProgressDelegate = Delegate<(Int64, Int64), Void>()
+
+        var isLoaded: Binding<Bool>
+
+        @Published var image: KFCrossPlatformImage?
+
+        init(source: Source?, options: KingfisherOptionsInfo?, isLoaded: Binding<Bool>) {
+            self.source = source
+            // The refreshing of `KFImage` would happen much more frequently then an `UIImageView`, even as a
+            // "side-effect". To prevent unintended flickering, add `.loadDiskFileSynchronously` as a default.
+            self.options = (options ?? []) + [.loadDiskFileSynchronously]
+            self.isLoaded = isLoaded
+            self.image = nil
         }
 
-        // Do not use @Published due to https://github.com/onevcat/Kingfisher/issues/1717. Revert to @Published once
-        // we can drop iOS 12.
-        var loaded = false                           { willSet { objectWillChange.send() } }
-        var loadedImage: KFCrossPlatformImage? = nil { willSet { objectWillChange.send() } }
-        var progress: Progress = .init()             { willSet { objectWillChange.send() } }
+        func start() {
 
-        func start<HoldingView: KFImageHoldingView>(context: Context<HoldingView>) {
-            guard let source = context.source else {
+            guard !loadingOrSucceeded else { return }
+
+            loadingOrSucceeded = true
+
+            guard let source = source else {
                 CallbackQueue.mainCurrentOrAsync.execute {
-                    context.onFailureDelegate.call(KingfisherError.imageSettingError(reason: .emptySource))
-                    if let image = context.options.onFailureImage {
-                        self.loadedImage = image
-                    }
-                    self.loading = false
-                    self.loaded = true
+                    self.onFailureDelegate.call(KingfisherError.imageSettingError(reason: .emptySource))
                 }
                 return
             }
 
-            loading = true
-            
-            progress = .init()
             downloadTask = KingfisherManager.shared
                 .retrieveImage(
                     with: source,
-                    options: context.options,
+                    options: options,
                     progressBlock: { size, total in
-                        self.updateProgress(downloaded: size, total: total)
-                        context.onProgressDelegate.call((size, total))
+                        self.onProgressDelegate.call((size, total))
                     },
                     completionHandler: { [weak self] result in
 
                         guard let self = self else { return }
 
-                        CallbackQueue.mainCurrentOrAsync.execute {
-                            self.downloadTask = nil
-                            self.loading = false
-                        }
-                        
+                        self.downloadTask = nil
                         switch result {
                         case .success(let value):
+                            // The normalized version of image is used to solve #1395
+                            // It should be not necessary if SwiftUI.Image can handle resizing correctly when created
+                            // by `Image.init(uiImage:)`. (The orientation information should be already contained in
+                            // a `UIImage`)
+                            // https://github.com/onevcat/Kingfisher/issues/1395
+                            let image = value.image.kf.normalized
                             CallbackQueue.mainCurrentOrAsync.execute {
-                                if let fadeDuration = context.fadeTransitionDuration(cacheType: value.cacheType) {
-                                    let animation = Animation.linear(duration: fadeDuration)
-                                    withAnimation(animation) { self.loaded = true }
-                                } else {
-                                    self.loaded = true
-                                }
-                                self.loadedImage = value.image
+                                self.image = image
                             }
-
                             CallbackQueue.mainAsync.execute {
-                                context.onSuccessDelegate.call(value)
+                                self.isLoaded.wrappedValue = true
+                                self.onSuccessDelegate.call(value)
                             }
                         case .failure(let error):
-                            CallbackQueue.mainCurrentOrAsync.execute {
-                                if let image = context.options.onFailureImage {
-                                    self.loadedImage = image
-                                }
-                                self.loaded = true
-                            }
-                            
+                            self.loadingOrSucceeded = false
                             CallbackQueue.mainAsync.execute {
-                                context.onFailureDelegate.call(error)
+                                self.onFailureDelegate.call(error)
                             }
                         }
                 })
         }
-        
-        private func updateProgress(downloaded: Int64, total: Int64) {
-            progress.totalUnitCount = total
-            progress.completedUnitCount = downloaded
-            objectWillChange.send()
-        }
 
         /// Cancels the download task if it is in progress.
-        func cancel() {
+        public func cancel() {
             downloadTask?.cancel()
-            downloadTask = nil
-            loading = false
+        }
+
+        func setOnFailure(perform action: ((KingfisherError) -> Void)?) {
+            onFailureDelegate.delegate(on: self) { (self, error) in
+                action?(error)
+            }
+        }
+
+        func setOnSuccess(perform action: ((RetrieveImageResult) -> Void)?) {
+            onSuccessDelegate.delegate(on: self) { (self, result) in
+                action?(result)
+            }
+        }
+
+        func setOnProgress(perform action: ((Int64, Int64) -> Void)?) {
+            onProgressDelegate.delegate(on: self) { (self, result) in
+                action?(result.0, result.1)
+            }
         }
     }
 }

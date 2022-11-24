@@ -36,6 +36,9 @@
 		FA69DFE7292F900F00990F57 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFE2292F900F00990F57 /* Task.swift */; };
 		FA69DFE8292F900F00990F57 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFE3292F900F00990F57 /* View.swift */; };
 		FA69DFE9292F900F00990F57 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFE4292F900F00990F57 /* Color.swift */; };
+		FA69DFEC292F953B00990F57 /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFEB292F953B00990F57 /* GalleryItem.swift */; };
+		FA69DFEE292F972200990F57 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFED292F972200990F57 /* GalleryView.swift */; };
+		FA69DFF1292FA71E00990F57 /* KingFisherImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69DFF0292FA71E00990F57 /* KingFisherImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		FA69DFE2292F900F00990F57 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		FA69DFE3292F900F00990F57 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		FA69DFE4292F900F00990F57 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FA69DFEB292F953B00990F57 /* GalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
+		FA69DFED292F972200990F57 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		FA69DFF0292FA71E00990F57 /* KingFisherImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherImageView.swift; sourceTree = "<group>"; };
 		FEFA3AD3B16FDBA07E67084B /* Pods_kiliaroTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiliaroTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,6 +178,7 @@
 		FA37FB45292F70B1009CDF89 /* kiliaroTest */ = {
 			isa = PBXGroup;
 			children = (
+				FA69DFEF292FA70800990F57 /* Views */,
 				FA69DFDF292F8FDE00990F57 /* Extensions */,
 				FA69DFD1292F780400990F57 /* Data */,
 				FA69DFCD292F77BE00990F57 /* Domain */,
@@ -252,6 +259,7 @@
 		FA69DFCE292F77CB00990F57 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				FA69DFEA292F952500990F57 /* Items */,
 				FA69DFCF292F77E700990F57 /* GalleryPage.swift */,
 				FA69DFD4292F7C3C00990F57 /* GalleryViewModel.swift */,
 			);
@@ -302,6 +310,23 @@
 				FA69DFE3292F900F00990F57 /* View.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA69DFEA292F952500990F57 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				FA69DFEB292F953B00990F57 /* GalleryItem.swift */,
+				FA69DFED292F972200990F57 /* GalleryView.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		FA69DFEF292FA70800990F57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA69DFF0292FA71E00990F57 /* KingFisherImageView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,8 +583,11 @@
 				FA69DFE8292F900F00990F57 /* View.swift in Sources */,
 				FA69DFDD292F861600990F57 /* GalleryRepository.swift in Sources */,
 				FA69DFD8292F7CFC00990F57 /* GalleryRepositoryImpl.swift in Sources */,
+				FA69DFEE292F972200990F57 /* GalleryView.swift in Sources */,
 				FA69DFCA292F734700990F57 /* ResponseError.swift in Sources */,
+				FA69DFEC292F953B00990F57 /* GalleryItem.swift in Sources */,
 				FA69DFE5292F900F00990F57 /* String.swift in Sources */,
+				FA69DFF1292FA71E00990F57 /* KingFisherImageView.swift in Sources */,
 				FA69DFE6292F900F00990F57 /* Int.swift in Sources */,
 				FA69DFC4292F734700990F57 /* Token.swift in Sources */,
 				FA69DFC6292F734700990F57 /* Constants.swift in Sources */,

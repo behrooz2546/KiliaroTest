@@ -27,7 +27,7 @@ class GalleryViewModel: ObservableObject {
         
         do {
             self.isLoading = true
-            self.models = try await repository.getImages(width: 100, height: 100, resizableMode: .crop)
+            self.models = try await repository.getImages(width: 100, height: 100, resizableMode: .bb)
             self.isLoading = false
         } catch let (error) {
             debugPrint(error)
